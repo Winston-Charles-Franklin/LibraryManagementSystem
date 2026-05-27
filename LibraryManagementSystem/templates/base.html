@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} AHSFNU Library Management System {% endblock %}</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logo">AHSFNU</div>
+        <div class="user-info">
+        {% if session.get('username') %}
+            <a href="{{ url_for('user_profile') }}">{{ session['username'] }}</a>
+            <a href="{{ url_for('logout') }}">退出</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">登录</a>
+        {% endif %}
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <div class="sidebar">
+            <a href="{{ url_for('home') }}">主页</a>
+            {% if session.get('is_admin') %}
+                <a href="{{ url_for('add_book') }}">添加书籍</a>
+                <a href="{{ url_for('readers_info') }}">读者信息</a>
+                <a href="{{ url_for('add_reader') }}">添加读者</a>
+                <a href="{{ url_for('borrow_records') }}">借阅记录</a>
+            {% endif %}
+            <a href="{{ url_for('search_books') }}">书籍借阅</a>
+            <a href="{{ url_for('my_borrows') }}">我的借阅</a>
+            <a href="{{ url_for('user_profile') }}">个人中心</a>
+        </div>
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}添加书籍{% endblock %}
+
+{% block content %}
+<div class="add-container">
+    <div class="add-body">
+
+        <form method="post" action="{{ url_for('add_book') }}">
+
+            <div class="info-group">
+                <div class="info-label">isbn</div>
+                <div class="info-field">
+                    <input type="text" name="isbn" value="" required>
+                    <div class="help-note">* </div>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">书名</div>
+                <div class="info-field">
+                    <input type="text" name="title" value="" required>
+                    <div class="help-note">* </div>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">作者</div>
+                <div class="info-field">
+                    <input type="text" name="author" value="">
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">出版社</div>
+                <div class="info-field">
+                    <input type="text" name="publisher" value="">
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">出版时间</div>
+                <div class="info-field">
+                    <input type="number" name="publish_time" value="">
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">分类</div>
+                <select name="category_code">
+                    <option value="">请选择分类</option>
+                    {% for code, name in categories %}
+                        <option value="{{ code }}">{{ code }} - {{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">总数</div>
+                <div class="info-field">
+                    <input type="number" name="total_copies" value=""  min="0">
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">位置</div>
+                <div class="info-field">
+                    <input type="text" name="location" value="">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">添加</button>
+                <button type="button" class="btn btn-secondary" onclick="history.back()">返回首页</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
