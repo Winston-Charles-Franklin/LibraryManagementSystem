@@ -422,8 +422,8 @@ def return_operation():
 @app.route('/renew_book',methods=['POST'])
 def renew_operation():
     record_id = request.form.get('record_id')
-    due_date_sql = 'SELECT due_date,renew_count FROM Borrow_records WHERE card_number=%s'
-    renew_sql = 'UPDATE Borrow_records SET due_date=%s, renew_count=renew_count+1 WHERE card_number=%s'
+    due_date_sql = 'SELECT due_date,renew_count FROM Borrow_records WHERE record_id=%s'
+    renew_sql = 'UPDATE Borrow_records SET due_date=%s, renew_count=renew_count+1 WHERE record_id=%s'
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -742,5 +742,5 @@ def internal_server_error(error):
     return render_template('error.html', error_code=500, error_text='发生了一些错误...'), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
